@@ -182,7 +182,7 @@ export default function Home() {
 
   async function fetchCollections() {
     const originURL =
-      window.location.protocol + "//" + "45.126.3.252" + ":" + 3004;
+      window.location.protocol + "//" + window.location.hostname + ":" + 3004;
     let API = originURL + "/api/collections";
     let result = await axios({
       method: "GET",
