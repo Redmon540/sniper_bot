@@ -63,6 +63,7 @@ export default function Home() {
     };
 
     let txInfo;
+
     try {
       const txHash = await wallet.signAndSubmitTransaction(payload);
       console.log(txHash);
@@ -181,7 +182,7 @@ export default function Home() {
 
   async function fetchCollections() {
     const originURL =
-      window.location.protocol + "//" + window.location.hostname + ":" + 3004;
+      window.location.protocol + "//" + "127.0.0.1" + ":" + 3004;
     let API = originURL + "/api/collections";
     let result = await axios({
       method: "GET",
